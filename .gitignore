@@ -1,0 +1,7 @@
+/vendor
+/.cache
+/.config
+/.local
+Homestead.json
+Homestead.yaml
+.env
