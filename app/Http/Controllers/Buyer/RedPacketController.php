@@ -178,7 +178,7 @@ class RedPacketController extends Controller
         $ShopRedPacket->type +=1; 
         $data = $ShopRedPacket->only(['red_packet_id','title','shop_id','type','money','expire_days','condition','start_time','end_time']);
 
-        if (UserRedPacket::where(['user_id'=>$this->user_id,'red_packet_id'=>$data['red_packet_id'],'type'=>$data['type'],'status'=>0])->exists()) {
+        if (UserRedPacket::where(['user_id'=>$this->user_id,'red_packet_id'=>$data['red_packet_id'],'type'=>$data['type']])->exists()) {
             return respond(201,'您已经领取过了！');
         }
 
